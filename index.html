@@ -1,211 +1,390 @@
-<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>flowerbloom</title><meta name="author" content="John Doe"><meta name="copyright" content="John Doe"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>flowerbloom</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta property="og:type" content="website">
 <meta property="og:title" content="flowerbloom">
 <meta property="og:url" content="https://huapu124.github.io/index.html">
 <meta property="og:site_name" content="flowerbloom">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://huapu124.github.io/img/butterfly-icon.png">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://huapu124.github.io/img/butterfly-icon.png"><script type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "flowerbloom",
-  "alternateName": [
-    "huapu124.github.io"
-  ],
-  "url": "https://huapu124.github.io/"
-}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://huapu124.github.io/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.7.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
-    (() => {
-      
-    const saveToLocal = {
-      set: (key, value, ttl) => {
-        try {
-          const data = { value }
-
-          if (ttl != null) {
-            data.expiry = Date.now() + ttl * 86400000
-          }
-
-          localStorage.setItem(key, JSON.stringify(data))
-        } catch (e) {
-          console.error(e)
-        }
-      },
-      get: key => {
-        const itemStr = localStorage.getItem(key)
-        if (!itemStr) return
-
-        try {
-          const data = JSON.parse(itemStr)
-
-          if (data.expiry && Date.now() > data.expiry) {
-            localStorage.removeItem(key)
-            return
-          }
-
-          return data.value
-        } catch {
-          localStorage.removeItem(key)
-        }
-      }
-    }
-
-    const scriptCache = new Map()
-    const cssCache = new Map()
-    window.btf = {
-      saveToLocal,
-      getScript: (url, attr = {}) => {
-        if (scriptCache.has(url)) {
-          return scriptCache.get(url)
-        }
-
-        const promise = new Promise((resolve, reject) => {
-          const script = document.createElement('script')
-
-          script.src = url
-          script.async = true
-
-          for (const key in attr) {
-            script.setAttribute(key, attr[key])
-          }
-
-          script.onload = resolve
-          script.onerror = reject
-
-          document.head.appendChild(script)
-        })
-
-        scriptCache.set(url, promise)
-
-        return promise
-      },
-      getCSS: (url, id) => {
-        if (cssCache.has(url)) {
-          return cssCache.get(url)
-        }
-
-        const promise = new Promise((resolve, reject) => {
-          const link = document.createElement('link')
-
-          link.rel = 'stylesheet'
-          link.href = url
-
-          if (id) {
-            link.id = id
-          }
-
-          link.onload = resolve
-          link.onerror = reject
-
-          document.head.appendChild(link)
-        })
-
-        cssCache.set(url, promise)
-
-        return promise
-      },
-      addGlobalFn: (key, fn, name = false, parent = window) => {
-        if (!false && key.startsWith('pjax')) return
-        const globalFn = parent.globalFn || {}
-        globalFn[key] = globalFn[key] || {}
-        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
-        parent.globalFn = globalFn
-      }
-    }
   
-      
-      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
-      const activateDarkMode = () => {
-        document.documentElement.dataset.theme = 'dark'
-        if (metaThemeColor !== null) {
-          metaThemeColor.setAttribute('content', '#0d0d0d')
-        }
-      }
-      const activateLightMode = () => {
-        document.documentElement.dataset.theme = 'light'
-        if (metaThemeColor !== null) {
-          metaThemeColor.setAttribute('content', '#ffffff')
-        }
-      }
+    <link rel="alternate" href="/atom.xml" title="flowerbloom" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
 
-      btf.activateDarkMode = activateDarkMode
-      btf.activateLightMode = activateLightMode
-
-      const theme = saveToLocal.get('theme')
+  
     
-          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
+
+<meta name="generator" content="Hexo 8.1.2"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">flowerbloom</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
         
-      
-      const asideStatus = saveToLocal.get('aside-status')
-      if (asideStatus !== undefined) {
-        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
-      }
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://huapu124.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-2026新生赛wp" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/" class="article-date">
+  <time class="dt-published" datetime="2026-11-16T08:11:02.000Z" itemprop="datePublished">2026-11-16</time>
+</a>
     
-      
-    const detectApple = () => {
-      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
-        document.documentElement.classList.add('apple')
-      }
-    }
-    detectApple()
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    })()
-  </script><script>const GLOBAL_CONFIG = {
-  root: '/',
-  algolia: undefined,
-  localSearch: undefined,
-  translate: undefined,
-  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
-  copy: {
-    success: 'Copy Successful',
-    error: 'Copy Failed',
-    noSupport: 'Browser Not Supported'
-  },
-  relativeDate: {
-    homepage: false,
-    post: false
-  },
-  runtime: '',
-  dateSuffix: {
-    just: 'Just now',
-    min: 'minutes ago',
-    hour: 'hours ago',
-    day: 'days ago',
-    month: 'months ago'
-  },
-  copyright: undefined,
-  lightbox: 'null',
-  Snackbar: undefined,
-  infinitegrid: {
-    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.1/dist/infinitegrid.min.js',
-    buttonText: 'Load More'
-  },
-  isPhotoFigcaption: false,
-  islazyloadPlugin: false,
-  isAnchor: false,
-  percent: {
-    toc: true,
-    rightside: false,
-  },
-  autoDarkmode: false
-}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
-  title: 'flowerbloom',
-  isHighlightShrink: false,
-  isToc: false,
-  pageType: 'home'
-}</script><meta name="generator" content="Hexo 8.1.2"></head><body><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">flowerbloom</span></a></span><div id="menus"></div></nav><div id="site-info"><h1 id="site-title">flowerbloom</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/" title="2026新生赛wp">2026新生赛wp</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2026-11-16T08:11:02.000Z" title="Created 2026-11-16 16:11:02">2026-11-16</time></span></div><div class="content">Aurora CTF 2026 Writeup姓名：钟豪国 比赛ID：花瀑 学号：2026150158 邮箱：a12345678z@foxmail.com 主选方向：Reverse  Web[Easy] ez_signin| 已完成打开容器，按F12，发现  进入http://challenge.szu.moe:21614/fll11144999得到flagAurora{dafd201a-1316-76ef-1da1-fe2ad332ed9d}  Crypto[Easy] I| 已完成下载附件得到Zfiliz{Dvox0nv_7l_gs3_Xibkg0tizksb_M1tsg}发现Zfiliz与Aurora正好成反向关系，查询后发现是 Atbash 密码，解密即得flagAurora{Welc0me_7o_th3_Crypt0graphy_N1ght} Reverse[Easy] 入坑逆向| 已完成使用IDA打开附件，shift+F12搜索字符串，发现flag    [Easy] 10w元内最好的apk| 已完成使用jadx打开附件，搜索maimactivity，进入。  根据r...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2026/11/16/hello-world/" title="Hello World">Hello World</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2026-11-16T05:45:07.866Z" title="Created 2026-11-16 13:45:07">2026-11-16</time></span></div><div class="content">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new &quot;My New Post&quot;  More info: Writing Run server1$ hexo server  More info: Server Generate static files1$ hexo generate  More info: Generating Deploy to remote sites1$ hexo deploy  More info: Deployment </div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">John Doe</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">2</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">1</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/" title="2026新生赛wp">2026新生赛wp</a><time datetime="2026-11-16T08:11:02.000Z" title="Created 2026-11-16 16:11:02">2026-11-16</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/11/16/hello-world/" title="Hello World">Hello World</a><time datetime="2026-11-16T05:45:07.866Z" title="Created 2026-11-16 13:45:07">2026-11-16</time></div></div></div></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>Tags</span></div><div class="card-tag-cloud"><a href="/tags/reverse/" style="font-size: 1.1em; color: #999">reverse</a></div></div><div class="card-widget card-archives">
-    <div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div>
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/">2026新生赛wp</a>
+    </h1>
   
-    <ul class="card-archive-list">
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
       
-        <li class="card-archive-list-item">
-          <a class="card-archive-list-link" href="/archives/2026/11/">
-            <span class="card-archive-list-date">
-              November 2026
-            </span>
-            <span class="card-archive-list-count">2</span>
-          </a>
-        </li>
+        <h1 id="Aurora-CTF-2026-Writeup"><a href="#Aurora-CTF-2026-Writeup" class="headerlink" title="Aurora CTF 2026 Writeup"></a>Aurora CTF 2026 Writeup</h1><p>姓名：钟豪国</p>
+<p>比赛ID：花瀑</p>
+<p>学号：2026150158</p>
+<p>邮箱：<a href="mailto:&#x61;&#49;&#x32;&#x33;&#52;&#x35;&#54;&#55;&#56;&#x7a;&#x40;&#x66;&#x6f;&#x78;&#x6d;&#97;&#105;&#108;&#x2e;&#99;&#111;&#109;">a12345678z@foxmail.com</a></p>
+<p>主选方向：Reverse</p>
+<hr>
+<h2 id="Web"><a href="#Web" class="headerlink" title="Web"></a>Web</h2><h3 id="Easy-ez-signin-已完成"><a href="#Easy-ez-signin-已完成" class="headerlink" title="[Easy] ez_signin| 已完成"></a>[Easy] ez_signin| 已完成</h3><p>打开容器，按F12，发现<!-- flag path: /fll11144999 --></p>
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/web.png" class="" title="这是图片描述">
+<p>进入<a target="_blank" rel="noopener" href="http://challenge.szu.moe:21614/fll11144999">http://challenge.szu.moe:21614/fll11144999</a><br>得到flag<br>Aurora{dafd201a-1316-76ef-1da1-fe2ad332ed9d}</p>
+<hr>
+<h2 id="Crypto"><a href="#Crypto" class="headerlink" title="Crypto"></a>Crypto</h2><h3 id="Easy-I-已完成"><a href="#Easy-I-已完成" class="headerlink" title="[Easy] I| 已完成"></a>[Easy] I| 已完成</h3><p>下载附件得到<br>Zfiliz{Dvox0nv_7l_gs3_Xibkg0tizksb_M1tsg}<br>发现Zfiliz与Aurora正好成反向关系，查询后发现是 Atbash 密码，解密即得flag<br>Aurora{Welc0me_7o_th3_Crypt0graphy_N1ght}</p>
+<h2 id="Reverse"><a href="#Reverse" class="headerlink" title="Reverse"></a>Reverse</h2><h3 id="Easy-入坑逆向-已完成"><a href="#Easy-入坑逆向-已完成" class="headerlink" title="[Easy] 入坑逆向| 已完成"></a>[Easy] 入坑逆向| 已完成</h3><p>使用IDA打开附件，shift+F12搜索字符串，发现flag</p>
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/%E5%85%A5%E5%9D%91%E9%80%86%E5%90%91.png" class="" title="这是图片描述">
+
+
+<h3 id="Easy-10w元内最好的apk-已完成"><a href="#Easy-10w元内最好的apk-已完成" class="headerlink" title="[Easy] 10w元内最好的apk| 已完成"></a>[Easy] 10w元内最好的apk| 已完成</h3><p>使用jadx打开附件，搜索maimactivity，进入。</p>
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/apk.png" class="" title="这是图片描述">
+<p>根据realflag发现加密后的flag，再根据base64的提示解密flag<br>Aurora{W4WaWA_BEST_ApK_UnD3e_10W}</p>
+<h3 id="Medium-原来还要自己拼？-已完成"><a href="#Medium-原来还要自己拼？-已完成" class="headerlink" title="[Medium] 原来还要自己拼？|已完成"></a>[Medium] 原来还要自己拼？|已完成</h3><p>使用AI阅读附件，得到检验逻辑为把输入先把输入向左挪两位与数组v的偶数下标比较，复原后，再把输入向右挪两位与数组v的奇数下标比较，使用AI得出脚本</p>
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/pin.png" class="" title="这是图片描述">
+<p>flag为Aurora{U_ARE_ASM_MASTER!}</p>
+<h3 id="Medium-Gaaameee-已完成"><a href="#Medium-Gaaameee-已完成" class="headerlink" title="[Medium] Gaaameee|已完成"></a>[Medium] Gaaameee|已完成</h3><p>运行附件后发现如图</p>
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/game.png" class="" title="这是图片描述">
+<p>使用ai搜索后，根据搜索结果下载对应游戏引擎，使用引擎打开附件，得到如下反编译代码</p>
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/game3.png" class="" title="这是图片描述">
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/game2.png" class="" title="这是图片描述">
+<p>使用AI写脚本得到flag</p>
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/game4.png" class="" title="这是图片描述">
+<p>Aurora{G4ME!_GEimU!_GAMU!_G3iM3!!!}</p>
+<h3 id="Medium-RE四步走-已完成"><a href="#Medium-RE四步走-已完成" class="headerlink" title="[Medium] RE四步走|已完成"></a>[Medium] RE四步走|已完成</h3><p>使用DIE打开附件</p>
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/4step.png" class="" title="这是图片描述">
+<p>发现upx壳，使用upx -d指令脱壳<br>使用IDA打开附件<br>代码如图</p>
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/4step2.png" class="" title="这是图片描述">
+<p>分析伪代码后找出密文如图</p>
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/4step3.png" class="" title="这是图片描述">
+<p>解密脚本如图</p>
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/4step4.png" class="" title="这是图片描述">
+<p>flag为Aurora{DE64_UPX_AND_XORLOOP}</p>
+<h3 id="Medium-ez-re-已完成"><a href="#Medium-ez-re-已完成" class="headerlink" title="[Medium] ez_re|已完成"></a>[Medium] ez_re|已完成</h3><p>使用IDA打开附件</p>
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/ez.png" class="" title="这是图片描述">
+<p>发现加密逻辑是把输入前十三个字符与0xAu异或，把后十个字符与0xCu异或，解密脚本如下</p>
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/ez2.png" class="" title="这是图片描述">
+<p>得到flagAurora{REVeRS3_s0_E4Sy}</p>
+<h3 id="Middle-Hard-Flower-已完成"><a href="#Middle-Hard-Flower-已完成" class="headerlink" title="[Middle-Hard] Flower|已完成"></a>[Middle-Hard] Flower|已完成</h3><p>使用IDA打开附件，按下F5后发现反编译失败</p>
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/flower.png" class="" title="这是图片描述">
+<p>由题目提示想到可能是花指令，对照教程后将三个花指令依次nop掉即可找到完整主函数</p>
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/flower2.png" class="" title="这是图片描述">
+<p>第一个，去除后进入main，找到第二个</p>
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/flower3.png" class="" title="这是图片描述">
+<p>进入mba2，找到第三个</p>
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/flower4.png" class="" title="这是图片描述">
+<p>加密函数如图</p>
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/flower5.png" class="" title="这是图片描述">
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/flower6.png" class="" title="这是图片描述">
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/flower7.png" class="" title="这是图片描述">
+<p>mba1为(a|b)-(a&amp;b),等价于a^b<br>mba2为(a | b) + (a &amp; b);等价于a+b<br>解密脚本如图</p>
+
+<p>flag为Aurora{sPr1ng_C0mes_4nD_f10w3rs_bLo0m}</p>
+<h3 id="Middle-Hard-リバースイデオロギー-已完成"><a href="#Middle-Hard-リバースイデオロギー-已完成" class="headerlink" title="[Middle-Hard] リバースイデオロギー|已完成"></a>[Middle-Hard] リバースイデオロギー|已完成</h3><p>使用ida打开附件，发现main函数为对输入加密再检验的逻辑，提取enc，进入encode发现是无法反编译的混乱函数</p>
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/tiao.png" class="" title="这是图片描述">
+<p>结合题目，猜测encode会在动态调试中复原<br>开始动态调试后程序出现Don’t debug ME!字样，通过该字符串搜索到反调试函数，</p>
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/tiao2.png" class="" title="这是图片描述">
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/tiao3.png" class="" title="这是图片描述">
+<p>如图，下断点</p>
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/tiao4.png" class="" title="这是图片描述">
+<p>在动态调试中把ecx更改为0绕过反调试<br>找到encode函数，使用U+P让ida重新识别为函数，提取随机数种子为0x72</p>
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/tiao5.png" class="" title="这是图片描述">
+<p>使用ai工具阅读encode并写出解密脚本得出flag</p>
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/tiao6.png" class="" title="这是图片描述">
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/tiao7.png" class="" title="这是图片描述">
+<p>flag为Aurora{w464n4_w4_531j4_um4r3m0773n0_4m4n0j4kud4!!}</p>
+<h3 id="Middle-Hard-Relingo-已完成"><a href="#Middle-Hard-Relingo-已完成" class="headerlink" title="[Middle-Hard] Relingo|已完成"></a>[Middle-Hard] Relingo|已完成</h3><p>用ida打开附件，发现start函数是看不懂的函数，使用ai辅助阅读后发现与PyInstaller有关</p>
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/py.png" class="" title="这是图片描述">
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/py2.png" class="" title="这是图片描述">
+<p>根据ai给出的分析方向建议得到反编译 PYC的方向<br>使用pyinstxtractor提取题目中的pyc文件<br>使用pycdc和pycdas反编译pyc，两者编译结果结合后得到最终函数</p>
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/py5.png" class="" title="这是图片描述">
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/py3.png" class="" title="这是图片描述">
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/py4.png" class="" title="这是图片描述">
+
+<p>发现这是个RC4加密算法，且密钥只有四位，范围也只在26个大写字母中，借助AI工具生成爆破密钥和解密脚本</p>
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/py8.png" class="" title="这是图片描述">
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/py9.png" class="" title="这是图片描述">
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/py10.png" class="" title="这是图片描述">
+
+<p>得到解密后的图片，图上信息即为flag</p>
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/py11.png" class="" title="这是图片描述">
+
+<h3 id="Middle-Hard-Tea-party-已完成"><a href="#Middle-Hard-Tea-party-已完成" class="headerlink" title="[Middle-Hard] Tea_party|已完成"></a>[Middle-Hard] Tea_party|已完成</h3><p>使用ida打开附件，发现主函数逻辑为将输入数据进行加密后与enc对比<br>找到如下加密函数</p>
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/tea.png" class="" title="这是图片描述">
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/tea2.png" class="" title="这是图片描述">
+<p>提取enc和key后交给AI进行解密操作，失败<br>再次检查ida界面发现一个奇怪的函数</p>
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/tea3.png" class="" title="这是图片描述">
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/tea4.png" class="" title="这是图片描述">
+
+<p>正是其对key的内容进行了改动导致解密失败<br>补充后得到正确解密脚本</p>
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/tea5.png" class="" title="这是图片描述">
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/tea6.png" class="" title="这是图片描述">
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/tea7.png" class="" title="这是图片描述">
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/tea7.png" class="" title="这是图片描述">
+
+<p>得到flag为Aurora{IDA_L1ke_TH1S_T34_P4R7Y!}</p>
+<h3 id="Hard-Wake-UP"><a href="#Hard-Wake-UP" class="headerlink" title="[Hard] Wake_UP!!!"></a>[Hard] Wake_UP!!!</h3><p>打开附件，发现“PLEASE INPUT FLAG:”，使用ida搜索该字符串，找到主函数</p>
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/wake.png" class="" title="这是图片描述">
+<p>逻辑为：执行初始化——反调试——用两个线程对输入做变换——再与目标数据变换——最后让n7加1<br>跟进n7，发现另一个比较函数</p>
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/wake2.png" class="" title="这是图片描述">
+<p>同时，发现一个TLS回调函数</p>
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/wake3.png" class="" title="这是图片描述">
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/wake4.png" class="" title="这是图片描述">
+<p>经过动态调试，发现TLS对异或表，对换表和输入的操作顺序为：TLS(0)——输入——TLS(1)——线程startaddress——TLS(2)——线程sub_4018F2——TLS(3)——与目标比较<br>在动态调试提取相应数据：TlsCallback_0 各阶段的 异或表、对换表、输入，使用AI得到最终解密脚本</p>
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/wake5.png" class="" title="这是图片描述">
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/wake6.png" class="" title="这是图片描述">
+<p>AI对话链接<a target="_blank" rel="noopener" href="https://chat.deepseek.com/share/6bevfdue7jhap0ka3g">https://chat.deepseek.com/share/6bevfdue7jhap0ka3g</a></p>
+<h3 id="Impossible-Omg"><a href="#Impossible-Omg" class="headerlink" title="[Impossible]Omg"></a>[Impossible]Omg</h3><p>使用die查壳，发现有upx壳</p>
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/omg.png" class="" title="这是图片描述">
+<p>使用upx -d指令发现脱壳失败，改用手动脱壳<br>用ida打开附件，找到upx壳加密完成跳转原函数的指令</p>
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/omg2.png" class="" title="这是图片描述">
+
+<p>用x32进行动态调试，找到这个跳转指令，下断点，程序停下后按F8，来到原函数的入口</p>
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/omg3.png" class="" title="这是图片描述">
+<p>使用scylla插件，dump现在的程序，另存为dump.exe<br>用ida打开dump，按下F5即得到正常反编译结果<br>按下shift+F12，注意到please input key: 字符串，找到主函数，向下翻注意到程序继续执行进了另一个函数<br>在AI的帮助下得到总的工作流程</p>
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/omg4.png" class="" title="这是图片描述">
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/omg5.png" class="" title="这是图片描述">
+<p>接下来根据readme文档，转化信息<br>2026年9月30日两点后对应时间戳1790704800之后<br>录入书目和在库状态转化为对应函数的格式{Maka_Aurora_Great_Again,Tale_of_FULL_Stack_GOD,IT_IS_TIME_TO_STUDY,CTFer’s_Adventures_IN_Cyberspace,WHAT_IS_RC4,VM_IS_SO_EZ,Deep_Understanding_of_Computer_Systems,Computer_Networking:_A_Top-Down_Approach,How_to_Learn_CTF_Reversing_Enginnering,BIG_FAT_CAT}{1,0,1,1,0,0,1,0,0,1}（事实上，题目并无给出在库即为1的提示，此处刚好碰上了）<br>向AI提供爆破出key的必须信息后，执行AI给出的脚本得到key</p>
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/omg6.png" class="" title="这是图片描述">
+<p>根据原函数，可知加密的明文为{时间戳}+{书目}+{在库状态}的组合，使用AI生成脚本穷举明文，再对密文进行md5处理，与题目提示的开头对比得到正确的哈希值<br>flag为Aurora{b0cb630fd6207649559033492d933150}<br>AI对话链接<a target="_blank" rel="noopener" href="https://chat.deepseek.com/share/183tbbfxcadii6vzrr">https://chat.deepseek.com/share/183tbbfxcadii6vzrr</a></p>
+
       
-    </ul>
-  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Website Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article Count :</div><div class="item-count">2</div></div><div class="webinfo-item"><div class="item-name">Unique Visitors :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Page Views :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Update :</div><div class="item-count" id="last-push-date" data-lastPushDate="2026-11-16T09:49:43.826Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By John Doe</span><span class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.7.2"></script><script src="/js/main.js?v=5.7.2"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huapu124.github.io/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/" data-id="cuidd53kVSjRkSp4hBzfOjocW" data-title="2026新生赛wp" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/reverse/" rel="tag">reverse</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2026/11/16/hello-world/" class="article-date">
+  <time class="dt-published" datetime="2026-11-16T05:45:07.866Z" itemprop="datePublished">2026-11-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2026/11/16/hello-world/">Hello World</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://huapu124.github.io/2026/11/16/hello-world/" data-id="cuidpg8eoi5-fxHBjxnOh2hL9" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/reverse/" rel="tag">reverse</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/reverse/" style="font-size: 10px;">reverse</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2026/11/">November 2026</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/">2026新生赛wp</a>
+          </li>
+        
+          <li>
+            <a href="/2026/11/16/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2026 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
