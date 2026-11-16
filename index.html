@@ -96,30 +96,128 @@
         <h1 id="Aurora-CTF-2026-Writeup"><a href="#Aurora-CTF-2026-Writeup" class="headerlink" title="Aurora CTF 2026 Writeup"></a>Aurora CTF 2026 Writeup</h1><p>姓名：钟豪国</p>
 <p>比赛ID：花瀑</p>
 <p>学号：2026150158</p>
-<p>邮箱：<a href="mailto:&#97;&#x31;&#50;&#x33;&#x34;&#53;&#x36;&#x37;&#x38;&#122;&#64;&#102;&#x6f;&#120;&#109;&#97;&#x69;&#x6c;&#46;&#99;&#x6f;&#x6d;">a12345678z@foxmail.com</a></p>
+<p>邮箱：<a href="mailto:&#97;&#x31;&#x32;&#x33;&#x34;&#x35;&#54;&#x37;&#56;&#x7a;&#64;&#x66;&#x6f;&#x78;&#109;&#97;&#105;&#x6c;&#46;&#x63;&#111;&#109;">a12345678z@foxmail.com</a></p>
 <p>主选方向：Reverse</p>
 <hr>
-<h2 id="Web"><a href="#Web" class="headerlink" title="Web"></a>Web</h2><h3 id="Easy-ez-signin-已完成"><a href="#Easy-ez-signin-已完成" class="headerlink" title="[Easy] ez_signin| 已完成"></a>[Easy] ez_signin| 已完成</h3><p>打开容器，按F12，发现<!-- flag path: /fll11144999 --><br><img src="/./web.png" alt="图片"><br>进入<a target="_blank" rel="noopener" href="http://challenge.szu.moe:21614/fll11144999">http://challenge.szu.moe:21614/fll11144999</a><br>得到flag<br>Aurora{dafd201a-1316-76ef-1da1-fe2ad332ed9d}</p>
+<h2 id="Web"><a href="#Web" class="headerlink" title="Web"></a>Web</h2><h3 id="Easy-ez-signin-已完成"><a href="#Easy-ez-signin-已完成" class="headerlink" title="[Easy] ez_signin| 已完成"></a>[Easy] ez_signin| 已完成</h3><p>打开容器，按F12，发现<!-- flag path: /fll11144999 --></p>
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/web.png" class="" title="这是图片描述">
+<p>进入<a target="_blank" rel="noopener" href="http://challenge.szu.moe:21614/fll11144999">http://challenge.szu.moe:21614/fll11144999</a><br>得到flag<br>Aurora{dafd201a-1316-76ef-1da1-fe2ad332ed9d}</p>
 <hr>
 <h2 id="Crypto"><a href="#Crypto" class="headerlink" title="Crypto"></a>Crypto</h2><h3 id="Easy-I-已完成"><a href="#Easy-I-已完成" class="headerlink" title="[Easy] I| 已完成"></a>[Easy] I| 已完成</h3><p>下载附件得到<br>Zfiliz{Dvox0nv_7l_gs3_Xibkg0tizksb_M1tsg}<br>发现Zfiliz与Aurora正好成反向关系，查询后发现是 Atbash 密码，解密即得flag<br>Aurora{Welc0me_7o_th3_Crypt0graphy_N1ght}</p>
-<h2 id="Reverse"><a href="#Reverse" class="headerlink" title="Reverse"></a>Reverse</h2><h3 id="Easy-入坑逆向-已完成"><a href="#Easy-入坑逆向-已完成" class="headerlink" title="[Easy] 入坑逆向| 已完成"></a>[Easy] 入坑逆向| 已完成</h3><p>使用IDA打开附件，shift+F12搜索字符串，发现flag<br><img src="/./%E5%85%A5%E5%9D%91%E9%80%86%E5%90%91.png" alt="图片"></p>
-<h3 id="Easy-10w元内最好的apk-已完成"><a href="#Easy-10w元内最好的apk-已完成" class="headerlink" title="[Easy] 10w元内最好的apk| 已完成"></a>[Easy] 10w元内最好的apk| 已完成</h3><p>使用jadx打开附件，搜索maimactivity，进入。<br><img src="/./apk.png" alt="tupian"><br>根据realflag发现加密后的flag，再根据base64的提示解密flag<br>Aurora{W4WaWA_BEST_ApK_UnD3e_10W}</p>
-<h3 id="Medium-原来还要自己拼？-已完成"><a href="#Medium-原来还要自己拼？-已完成" class="headerlink" title="[Medium] 原来还要自己拼？|已完成"></a>[Medium] 原来还要自己拼？|已完成</h3><p>使用AI阅读附件，得到检验逻辑为把输入先把输入向左挪两位与数组v的偶数下标比较，复原后，再把输入向右挪两位与数组v的奇数下标比较，使用AI得出脚本<br><img src="/./pin.png" alt="tupian"><br>flag为Aurora{U_ARE_ASM_MASTER!}</p>
-<h3 id="Medium-Gaaameee-已完成"><a href="#Medium-Gaaameee-已完成" class="headerlink" title="[Medium] Gaaameee|已完成"></a>[Medium] Gaaameee|已完成</h3><p>运行附件后发现如图<br><img src="/./game.png" alt="tu"><br>使用ai搜索后，根据搜索结果下载对应游戏引擎，使用引擎打开附件，得到如下反编译代码<br><img src="/./game3.png" alt="tu"><br><img src="/./game2.png" alt="code"><br>使用AI写脚本得到flag<br><img src="/./game4.png" alt="tu"><br>Aurora{G4ME!_GEimU!_GAMU!_G3iM3!!!}</p>
-<h3 id="Medium-RE四步走-已完成"><a href="#Medium-RE四步走-已完成" class="headerlink" title="[Medium] RE四步走|已完成"></a>[Medium] RE四步走|已完成</h3><p>使用DIE打开附件<br><img src="/./4step.png" alt="tu"><br>发现upx壳，使用upx -d指令脱壳<br>使用IDA打开附件<br>代码如图<br><img src="/./4step2.png" alt="tu"><br>分析伪代码后找出密文如图<br><img src="/./4step3.png" alt="tu"><br>解密脚本如图<br><img src="/./4step4.png" alt="tu"><br>flag为Aurora{DE64_UPX_AND_XORLOOP}</p>
-<h3 id="Medium-ez-re-已完成"><a href="#Medium-ez-re-已完成" class="headerlink" title="[Medium] ez_re|已完成"></a>[Medium] ez_re|已完成</h3><p>使用IDA打开附件<br><img src="/./ez.png" alt="tu"><br>发现加密逻辑是把输入前十三个字符与0xAu异或，把后十个字符与0xCu异或，解密脚本如下<br><img src="/ez2.png" alt="tu"><br>得到flagAurora{REVeRS3_s0_E4Sy}</p>
-<h3 id="Middle-Hard-Flower-已完成"><a href="#Middle-Hard-Flower-已完成" class="headerlink" title="[Middle-Hard] Flower|已完成"></a>[Middle-Hard] Flower|已完成</h3><p>使用IDA打开附件，按下F5后发现反编译失败<br><img src="/flower.png" alt="tu"><br>由题目提示想到可能是花指令，对照教程后将三个花指令依次nop掉即可找到完整主函数<br><img src="/./flower2.png" alt="tu"><br>第一个，去除后进入main，找到第二个<br><img src="/./flower3.png" alt="tu"><br>进入mba2，找到第三个<br><img src="/./flower4.png" alt="tu"><br>加密函数如图<br><img src="/./flower5.png" alt="tu"><br><img src="/./flower6.png" alt="tu"><br><img src="/./flower7.png" alt="tu"><br>mba1为(a|b)-(a&amp;b),等价于a^b<br>mba2为(a | b) + (a &amp; b);等价于a+b<br>解密脚本如图<br><img src="/./flower8.png" alt="tu"><br>flag为Aurora{sPr1ng_C0mes_4nD_f10w3rs_bLo0m}</p>
-<h3 id="Middle-Hard-リバースイデオロギー-已完成"><a href="#Middle-Hard-リバースイデオロギー-已完成" class="headerlink" title="[Middle-Hard] リバースイデオロギー|已完成"></a>[Middle-Hard] リバースイデオロギー|已完成</h3><p>使用ida打开附件，发现main函数为对输入加密再检验的逻辑，提取enc，进入encode发现是无法反编译的混乱函数<br><img src="/./tiao.png" alt="tu"><br>结合题目，猜测encode会在动态调试中复原<br>开始动态调试后程序出现Don’t debug ME!字样，通过该字符串搜索到反调试函数，<br><img src="/./tiao2.png" alt="tu"><br><img src="/./tiao3.png" alt="tu"><br>如图，下断点<br><img src="/./tiao4.png" alt="tu"><br>在动态调试中把ecx更改为0绕过反调试<br>找到encode函数，使用U+P让ida重新识别为函数，提取随机数种子为0x72<br><img src="/./tiao5.png" alt="tu"><br>使用ai工具阅读encode并写出解密脚本得出flag<br><img src="/./tiao6.png" alt="tu"><br><img src="/./tiao7.png" alt="tu"><br>flag为Aurora{w464n4_w4_531j4_um4r3m0773n0_4m4n0j4kud4!!}</p>
-<h3 id="Middle-Hard-Relingo-已完成"><a href="#Middle-Hard-Relingo-已完成" class="headerlink" title="[Middle-Hard] Relingo|已完成"></a>[Middle-Hard] Relingo|已完成</h3><p>用ida打开附件，发现start函数是看不懂的函数，使用ai辅助阅读后发现与PyInstaller有关<br><img src="/./py.png" alt="tu"><br><img src="/./py2.png" alt="tu"><br>根据ai给出的分析方向建议得到反编译 PYC的方向<br>使用pyinstxtractor提取题目中的pyc文件<br>使用pycdc和pycdas反编译pyc，两者编译结果结合后得到最终函数<br><img src="/./py5.png" alt="tu"><br><img src="/./py3.png" alt="tu"><br><img src="/./py4.png" alt="tu"></p>
-<p>发现这是个RC4加密算法，且密钥只有四位，范围也只在26个大写字母中，借助AI工具生成爆破密钥和解密脚本<br><img src="/./py8.png" alt="tu"><br><img src="/./py9.png" alt="tu"><br><img src="/./py10.png" alt="tu"></p>
-<p>得到解密后的图片，图上信息即为flag<br><img src="/./py11.png" alt="tu"></p>
-<h3 id="Middle-Hard-Tea-party-已完成"><a href="#Middle-Hard-Tea-party-已完成" class="headerlink" title="[Middle-Hard] Tea_party|已完成"></a>[Middle-Hard] Tea_party|已完成</h3><p>使用ida打开附件，发现主函数逻辑为将输入数据进行加密后与enc对比<br>找到如下加密函数<br><img src="/./tea.png" alt="tu"><br><img src="/./tea2.png" alt="tu"><br>提取enc和key后交给AI进行解密操作，失败<br>再次检查ida界面发现一个奇怪的函数</p>
-<p><img src="/./tea3.png" alt="tu"><br><img src="/./tea4.png" alt="tu"></p>
-<p>正是其对key的内容进行了改动导致解密失败<br>补充后得到正确解密脚本<br><img src="/./tea5.png" alt="tu"><br><img src="/./tea6.png" alt="tu"><br><img src="/./tea7.png" alt="tu"><br><img src="/./tea8.png" alt="tu"></p>
+<h2 id="Reverse"><a href="#Reverse" class="headerlink" title="Reverse"></a>Reverse</h2><h3 id="Easy-入坑逆向-已完成"><a href="#Easy-入坑逆向-已完成" class="headerlink" title="[Easy] 入坑逆向| 已完成"></a>[Easy] 入坑逆向| 已完成</h3><p>使用IDA打开附件，shift+F12搜索字符串，发现flag</p>
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/%E5%85%A5%E5%9D%91%E9%80%86%E5%90%91.png" class="" title="这是图片描述">
+
+
+<h3 id="Easy-10w元内最好的apk-已完成"><a href="#Easy-10w元内最好的apk-已完成" class="headerlink" title="[Easy] 10w元内最好的apk| 已完成"></a>[Easy] 10w元内最好的apk| 已完成</h3><p>使用jadx打开附件，搜索maimactivity，进入。</p>
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/apk.png" class="" title="这是图片描述">
+<p>根据realflag发现加密后的flag，再根据base64的提示解密flag<br>Aurora{W4WaWA_BEST_ApK_UnD3e_10W}</p>
+<h3 id="Medium-原来还要自己拼？-已完成"><a href="#Medium-原来还要自己拼？-已完成" class="headerlink" title="[Medium] 原来还要自己拼？|已完成"></a>[Medium] 原来还要自己拼？|已完成</h3><p>使用AI阅读附件，得到检验逻辑为把输入先把输入向左挪两位与数组v的偶数下标比较，复原后，再把输入向右挪两位与数组v的奇数下标比较，使用AI得出脚本</p>
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/pin.png" class="" title="这是图片描述">
+<p>flag为Aurora{U_ARE_ASM_MASTER!}</p>
+<h3 id="Medium-Gaaameee-已完成"><a href="#Medium-Gaaameee-已完成" class="headerlink" title="[Medium] Gaaameee|已完成"></a>[Medium] Gaaameee|已完成</h3><p>运行附件后发现如图</p>
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/game.png" class="" title="这是图片描述">
+<p>使用ai搜索后，根据搜索结果下载对应游戏引擎，使用引擎打开附件，得到如下反编译代码</p>
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/game3.png" class="" title="这是图片描述">
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/game2.png" class="" title="这是图片描述">
+<p>使用AI写脚本得到flag</p>
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/game4.png" class="" title="这是图片描述">
+<p>Aurora{G4ME!_GEimU!_GAMU!_G3iM3!!!}</p>
+<h3 id="Medium-RE四步走-已完成"><a href="#Medium-RE四步走-已完成" class="headerlink" title="[Medium] RE四步走|已完成"></a>[Medium] RE四步走|已完成</h3><p>使用DIE打开附件</p>
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/4step.png" class="" title="这是图片描述">
+<p>发现upx壳，使用upx -d指令脱壳<br>使用IDA打开附件<br>代码如图</p>
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/4step2.png" class="" title="这是图片描述">
+<p>分析伪代码后找出密文如图</p>
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/4step3.png" class="" title="这是图片描述">
+<p>解密脚本如图</p>
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/4step4.png" class="" title="这是图片描述">
+<p>flag为Aurora{DE64_UPX_AND_XORLOOP}</p>
+<h3 id="Medium-ez-re-已完成"><a href="#Medium-ez-re-已完成" class="headerlink" title="[Medium] ez_re|已完成"></a>[Medium] ez_re|已完成</h3><p>使用IDA打开附件</p>
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/ez.png" class="" title="这是图片描述">
+<p>发现加密逻辑是把输入前十三个字符与0xAu异或，把后十个字符与0xCu异或，解密脚本如下</p>
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/ez2.png" class="" title="这是图片描述">
+<p>得到flagAurora{REVeRS3_s0_E4Sy}</p>
+<h3 id="Middle-Hard-Flower-已完成"><a href="#Middle-Hard-Flower-已完成" class="headerlink" title="[Middle-Hard] Flower|已完成"></a>[Middle-Hard] Flower|已完成</h3><p>使用IDA打开附件，按下F5后发现反编译失败</p>
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/flower.png" class="" title="这是图片描述">
+<p>由题目提示想到可能是花指令，对照教程后将三个花指令依次nop掉即可找到完整主函数</p>
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/flower2.png" class="" title="这是图片描述">
+<p>第一个，去除后进入main，找到第二个</p>
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/flower3.png" class="" title="这是图片描述">
+<p>进入mba2，找到第三个</p>
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/flower4.png" class="" title="这是图片描述">
+<p>加密函数如图</p>
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/flower5.png" class="" title="这是图片描述">
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/flower6.png" class="" title="这是图片描述">
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/flower7.png" class="" title="这是图片描述">
+<p>mba1为(a|b)-(a&amp;b),等价于a^b<br>mba2为(a | b) + (a &amp; b);等价于a+b<br>解密脚本如图</p>
+
+<p>flag为Aurora{sPr1ng_C0mes_4nD_f10w3rs_bLo0m}</p>
+<h3 id="Middle-Hard-リバースイデオロギー-已完成"><a href="#Middle-Hard-リバースイデオロギー-已完成" class="headerlink" title="[Middle-Hard] リバースイデオロギー|已完成"></a>[Middle-Hard] リバースイデオロギー|已完成</h3><p>使用ida打开附件，发现main函数为对输入加密再检验的逻辑，提取enc，进入encode发现是无法反编译的混乱函数</p>
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/tiao.png" class="" title="这是图片描述">
+<p>结合题目，猜测encode会在动态调试中复原<br>开始动态调试后程序出现Don’t debug ME!字样，通过该字符串搜索到反调试函数，</p>
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/tiao2.png" class="" title="这是图片描述">
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/tiao3.png" class="" title="这是图片描述">
+<p>如图，下断点</p>
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/tiao4.png" class="" title="这是图片描述">
+<p>在动态调试中把ecx更改为0绕过反调试<br>找到encode函数，使用U+P让ida重新识别为函数，提取随机数种子为0x72</p>
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/tiao5.png" class="" title="这是图片描述">
+<p>使用ai工具阅读encode并写出解密脚本得出flag</p>
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/tiao6.png" class="" title="这是图片描述">
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/tiao7.png" class="" title="这是图片描述">
+<p>flag为Aurora{w464n4_w4_531j4_um4r3m0773n0_4m4n0j4kud4!!}</p>
+<h3 id="Middle-Hard-Relingo-已完成"><a href="#Middle-Hard-Relingo-已完成" class="headerlink" title="[Middle-Hard] Relingo|已完成"></a>[Middle-Hard] Relingo|已完成</h3><p>用ida打开附件，发现start函数是看不懂的函数，使用ai辅助阅读后发现与PyInstaller有关</p>
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/py.png" class="" title="这是图片描述">
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/py2.png" class="" title="这是图片描述">
+<p>根据ai给出的分析方向建议得到反编译 PYC的方向<br>使用pyinstxtractor提取题目中的pyc文件<br>使用pycdc和pycdas反编译pyc，两者编译结果结合后得到最终函数</p>
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/py5.png" class="" title="这是图片描述">
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/py3.png" class="" title="这是图片描述">
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/py4.png" class="" title="这是图片描述">
+
+<p>发现这是个RC4加密算法，且密钥只有四位，范围也只在26个大写字母中，借助AI工具生成爆破密钥和解密脚本</p>
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/py8.png" class="" title="这是图片描述">
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/py9.png" class="" title="这是图片描述">
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/py10.png" class="" title="这是图片描述">
+
+<p>得到解密后的图片，图上信息即为flag</p>
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/py11.png" class="" title="这是图片描述">
+
+<h3 id="Middle-Hard-Tea-party-已完成"><a href="#Middle-Hard-Tea-party-已完成" class="headerlink" title="[Middle-Hard] Tea_party|已完成"></a>[Middle-Hard] Tea_party|已完成</h3><p>使用ida打开附件，发现主函数逻辑为将输入数据进行加密后与enc对比<br>找到如下加密函数</p>
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/tea.png" class="" title="这是图片描述">
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/tea2.png" class="" title="这是图片描述">
+<p>提取enc和key后交给AI进行解密操作，失败<br>再次检查ida界面发现一个奇怪的函数</p>
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/tea3.png" class="" title="这是图片描述">
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/tea4.png" class="" title="这是图片描述">
+
+<p>正是其对key的内容进行了改动导致解密失败<br>补充后得到正确解密脚本</p>
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/tea5.png" class="" title="这是图片描述">
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/tea6.png" class="" title="这是图片描述">
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/tea7.png" class="" title="这是图片描述">
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/tea7.png" class="" title="这是图片描述">
+
 <p>得到flag为Aurora{IDA_L1ke_TH1S_T34_P4R7Y!}</p>
-<h3 id="Hard-Wake-UP"><a href="#Hard-Wake-UP" class="headerlink" title="[Hard] Wake_UP!!!"></a>[Hard] Wake_UP!!!</h3><p>打开附件，发现“PLEASE INPUT FLAG:”，使用ida搜索该字符串，找到主函数<br><img src="/./wake.png" alt="tu"><br>逻辑为：执行初始化——反调试——用两个线程对输入做变换——再与目标数据变换——最后让n7加1<br>跟进n7，发现另一个比较函数<br><img src="/./wake2.png" alt="tu"><br>同时，发现一个TLS回调函数<br><img src="/./wake3.png" alt="tu"><br><img src="/./wake4.png" alt="tu"><br>经过动态调试，发现TLS对异或表，对换表和输入的操作顺序为：TLS(0)——输入——TLS(1)——线程startaddress——TLS(2)——线程sub_4018F2——TLS(3)——与目标比较<br>在动态调试提取相应数据：TlsCallback_0 各阶段的 异或表、对换表、输入，使用AI得到最终解密脚本<br><img src="/./wake5.png" alt="tu"><br><img src="/./wake6.png" alt="tu"><br>AI对话链接<a target="_blank" rel="noopener" href="https://chat.deepseek.com/share/6bevfdue7jhap0ka3g">https://chat.deepseek.com/share/6bevfdue7jhap0ka3g</a></p>
-<h3 id="Impossible-Omg"><a href="#Impossible-Omg" class="headerlink" title="[Impossible]Omg"></a>[Impossible]Omg</h3><p>使用die查壳，发现有upx壳<br><img src="/./omg.png" alt="tu"><br>使用upx -d指令发现脱壳失败，改用手动脱壳<br>用ida打开附件，找到upx壳加密完成跳转原函数的指令<br><img src="/./omg2.png" alt="tu"></p>
-<p>用x32进行动态调试，找到这个跳转指令，下断点，程序停下后按F8，来到原函数的入口<br><img src="/./omg3.png" alt="tu"><br>使用scylla插件，dump现在的程序，另存为dump.exe<br>用ida打开dump，按下F5即得到正常反编译结果<br>按下shift+F12，注意到please input key: 字符串，找到主函数，向下翻注意到程序继续执行进了另一个函数<br>在AI的帮助下得到总的工作流程<br><img src="/./omg4.png" alt="tu"><br><img src="/./omg5.png" alt="tu"><br>接下来根据readme文档，转化信息<br>2026年9月30日两点后对应时间戳1790704800之后<br>录入书目和在库状态转化为对应函数的格式{Maka_Aurora_Great_Again,Tale_of_FULL_Stack_GOD,IT_IS_TIME_TO_STUDY,CTFer’s_Adventures_IN_Cyberspace,WHAT_IS_RC4,VM_IS_SO_EZ,Deep_Understanding_of_Computer_Systems,Computer_Networking:_A_Top-Down_Approach,How_to_Learn_CTF_Reversing_Enginnering,BIG_FAT_CAT}{1,0,1,1,0,0,1,0,0,1}（事实上，题目并无给出在库即为1的提示，此处刚好碰上了）<br>向AI提供爆破出key的必须信息后，执行AI给出的脚本得到key<br><img src="/./omg6.png" alt="tu"><br>根据原函数，可知加密的明文为{时间戳}+{书目}+{在库状态}的组合，使用AI生成脚本穷举明文，再对密文进行md5处理，与题目提示的开头对比得到正确的哈希值<br>flag为Aurora{b0cb630fd6207649559033492d933150}<br>AI对话链接<a target="_blank" rel="noopener" href="https://chat.deepseek.com/share/183tbbfxcadii6vzrr">https://chat.deepseek.com/share/183tbbfxcadii6vzrr</a></p>
+<h3 id="Hard-Wake-UP"><a href="#Hard-Wake-UP" class="headerlink" title="[Hard] Wake_UP!!!"></a>[Hard] Wake_UP!!!</h3><p>打开附件，发现“PLEASE INPUT FLAG:”，使用ida搜索该字符串，找到主函数</p>
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/wake.png" class="" title="这是图片描述">
+<p>逻辑为：执行初始化——反调试——用两个线程对输入做变换——再与目标数据变换——最后让n7加1<br>跟进n7，发现另一个比较函数</p>
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/wake2.png" class="" title="这是图片描述">
+<p>同时，发现一个TLS回调函数</p>
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/wake3.png" class="" title="这是图片描述">
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/wake4.png" class="" title="这是图片描述">
+<p>经过动态调试，发现TLS对异或表，对换表和输入的操作顺序为：TLS(0)——输入——TLS(1)——线程startaddress——TLS(2)——线程sub_4018F2——TLS(3)——与目标比较<br>在动态调试提取相应数据：TlsCallback_0 各阶段的 异或表、对换表、输入，使用AI得到最终解密脚本</p>
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/wake5.png" class="" title="这是图片描述">
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/wake6.png" class="" title="这是图片描述">
+<p>AI对话链接<a target="_blank" rel="noopener" href="https://chat.deepseek.com/share/6bevfdue7jhap0ka3g">https://chat.deepseek.com/share/6bevfdue7jhap0ka3g</a></p>
+<h3 id="Impossible-Omg"><a href="#Impossible-Omg" class="headerlink" title="[Impossible]Omg"></a>[Impossible]Omg</h3><p>使用die查壳，发现有upx壳</p>
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/omg.png" class="" title="这是图片描述">
+<p>使用upx -d指令发现脱壳失败，改用手动脱壳<br>用ida打开附件，找到upx壳加密完成跳转原函数的指令</p>
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/omg2.png" class="" title="这是图片描述">
+
+<p>用x32进行动态调试，找到这个跳转指令，下断点，程序停下后按F8，来到原函数的入口</p>
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/omg3.png" class="" title="这是图片描述">
+<p>使用scylla插件，dump现在的程序，另存为dump.exe<br>用ida打开dump，按下F5即得到正常反编译结果<br>按下shift+F12，注意到please input key: 字符串，找到主函数，向下翻注意到程序继续执行进了另一个函数<br>在AI的帮助下得到总的工作流程</p>
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/omg4.png" class="" title="这是图片描述">
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/omg5.png" class="" title="这是图片描述">
+<p>接下来根据readme文档，转化信息<br>2026年9月30日两点后对应时间戳1790704800之后<br>录入书目和在库状态转化为对应函数的格式{Maka_Aurora_Great_Again,Tale_of_FULL_Stack_GOD,IT_IS_TIME_TO_STUDY,CTFer’s_Adventures_IN_Cyberspace,WHAT_IS_RC4,VM_IS_SO_EZ,Deep_Understanding_of_Computer_Systems,Computer_Networking:_A_Top-Down_Approach,How_to_Learn_CTF_Reversing_Enginnering,BIG_FAT_CAT}{1,0,1,1,0,0,1,0,0,1}（事实上，题目并无给出在库即为1的提示，此处刚好碰上了）<br>向AI提供爆破出key的必须信息后，执行AI给出的脚本得到key</p>
+<img src="/2026/11/16/2026%E6%96%B0%E7%94%9F%E8%B5%9Bwp/omg6.png" class="" title="这是图片描述">
+<p>根据原函数，可知加密的明文为{时间戳}+{书目}+{在库状态}的组合，使用AI生成脚本穷举明文，再对密文进行md5处理，与题目提示的开头对比得到正确的哈希值<br>flag为Aurora{b0cb630fd6207649559033492d933150}<br>AI对话链接<a target="_blank" rel="noopener" href="https://chat.deepseek.com/share/183tbbfxcadii6vzrr">https://chat.deepseek.com/share/183tbbfxcadii6vzrr</a></p>
 
       
     </div>
